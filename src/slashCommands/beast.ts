@@ -63,7 +63,7 @@ export const command: SlashCommand = {
 
         for (let i = 5; i < attackDamageLines.length; i += 5) {
           embed.addFields({
-            name: '\u200B\u200B\u200B\u200B\u200B\u200B\u200B',
+            name: '\u200B',
             value: attackDamageLines.slice(i, i + 5).join('\n'),
             inline: true,
           });
