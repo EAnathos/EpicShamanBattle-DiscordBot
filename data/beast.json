@@ -1,0 +1,348 @@
+{
+  "ArchmageOne": {
+    "name": "Archmage One",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080231354388/image-removebg-preview_10.png?ex=67cc69aa&is=67cb182a&hm=7e1138854a63c7ff4f68af12ddc6e1cc2d9bf4ad5413e9d474db4d9a7301066c&=&format=webp&quality=lossless&width=469&height=399",
+    "NewAbilities": {
+      "Lv3": "+20% [ONE]’s Damnation skill damage",
+      "Lv6": "Unlocks [Woosh]",
+      "Lv9": "+10% chance to unleash a tornado",
+      "Lv12": "Unlocks [Kaboom]",
+      "Lv15": "+5 lightning strike targets"
+    }
+  },
+  "GeneralTremen": {
+    "name": "General Tremen",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725619470396/image-removebg-preview_5.png?ex=67cc6956&is=67cb17d6&hm=bdc1f85438cdde216de5ddeca0d7e645ac3c8c50b626e5df6c4287719624f041&=&format=webp&quality=lossless&width=373&height=360",
+    "NewAbilities": {
+      "Lv3": "+30% damage",
+      "Lv6": "Unlock [Smolder]",
+      "Lv9": "+1 range per 30 flames",
+      "Lv12": "[Prime] generates +1 flame",
+      "Lv15": "20% chance to prevent flame reset"
+    },
+    "AttackDamage": {
+      "Lv1": 15000,
+      "Lv2": 18600,
+      "Lv3": 22200,
+      "Lv4": 25800,
+      "Lv5": 29400,
+      "Lv6": 33000,
+      "Lv7": 36600,
+      "Lv8": 40200,
+      "Lv9": 43800,
+      "Lv10": 47400,
+      "Lv11": 51000,
+      "Lv12": 54600,
+      "Lv13": 58200,
+      "Lv14": 61800,
+      "Lv15": 65400
+    }
+  },
+  "GrimReaperProfy": {
+    "name": "Grim Reaper Profy",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875079920844871/image-removebg-preview_9.png?ex=67cc69aa&is=67cb182a&hm=1858b016549cadab08539fddea723fa559ccd4749eaa13c66951a063d9c78c09&=&format=webp&quality=lossless&width=398&height=401",
+    "NewAbilities": {
+      "Lv3": "Reduces skill cooldown by 5s",
+      "Lv6": "+2% effect of HP-proportional damage",
+      "Lv9": "+3 attack range",
+      "Lv12": "[Harvest] has a 10% chance to trigger again",
+      "Lv15": "[Harvest] deals 100% of current HP as damage to normal enemies"
+    }
+  },
+  "GuardCaptainToji": {
+    "name": "Guard Captain Toji",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726987071579/image-removebg-preview_8.png?ex=67cc6956&is=67cb17d6&hm=ba77ea7ef56e1cb3797cf06eba50e0475a3fde82d1bd6b62b8cb422fbb101a5c&=&format=webp&quality=lossless&width=454&height=295",
+    "NewAbilities": {
+      "Lv3": "+1 attack range",
+      "Lv6": "+50% attack speed",
+      "Lv9": "+5s attack duration",
+      "Lv12": "Defeating an enemy reduces next skill cooldown by 0.5s",
+      "Lv15": "[Kill Experience] attacks are doubled"
+    },
+    "AttackDamage": {
+      "Lv1": 500,
+      "Lv2": 650,
+      "Lv3": 800,
+      "Lv4": 950,
+      "Lv5": 1100,
+      "Lv6": 1250,
+      "Lv7": 1400,
+      "Lv8": 1550,
+      "Lv9": 1700,
+      "Lv10": 1850,
+      "Lv11": 2000,
+      "Lv12": 2150,
+      "Lv13": 2300,
+      "Lv14": 2450,
+      "Lv15": 2600
+    }
+  },
+  "HighPriestFuzzy": {
+    "name": "High Priest Fuzzy",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725246304359/image-removebg-preview_4.png?ex=67cc6956&is=67cb17d6&hm=f59af215ce42570c78110cd3091023bf2df55c33f98ccea365a89d8e999c67e4&=&format=webp&quality=lossless&width=338&height=416",
+    "NewAbilities": {
+      "Lv3": "+5% Shaman's HP recovery rate",
+      "Lv6": "Unlocks [Fluffy Blessing]",
+      "Lv9": "+2% spell attack power",
+      "Lv12": "Unlocks [Protection of Mountain Goat]",
+      "Lv15": "Upon Shaman's revival, +50% spell attack power"
+    },
+    "RecoveryRate": {
+      "Lv1": "15.00%",
+      "Lv2": "15.50%",
+      "Lv3": "21.00%",
+      "Lv4": "21.50%",
+      "Lv5": "22.00%",
+      "Lv6": "22.50%",
+      "Lv7": "23.00%",
+      "Lv8": "23.50%",
+      "Lv9": "24.00%",
+      "Lv10": "24.50%",
+      "Lv11": "25.00%",
+      "Lv12": "25.50%",
+      "Lv13": "26.00%",
+      "Lv14": "26.50%",
+      "Lv15": "27.00%"
+    }
+  },
+  "IcicleIII": {
+    "name": "Icicle III",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874723539357706/image-removebg-preview.png?ex=67cc6955&is=67cb17d5&hm=829e8bdb70a99fe5ca85a22abd0b5074868e6dc9d3a1cfa2f7e2ad0a2760c4e1&=&format=webp&quality=lossless&width=231&height=221",
+    "NewAbilities": {
+      "Lv3": "+2s skill duration",
+      "Lv6": "Increases water element upgrade by 1 while the skill is active",
+      "Lv9": "+5s skill duration",
+      "Lv12": "Unlocks [Forward]",
+      "Lv15": "+4% chance to use Tidal Wave spell"
+    },
+    "SpellDamageIncrease": {
+      "Lv1": "200%",
+      "Lv2": "210%",
+      "Lv3": "220%",
+      "Lv4": "230%",
+      "Lv5": "240%",
+      "Lv6": "250%",
+      "Lv7": "260%",
+      "Lv8": "270%",
+      "Lv9": "280%",
+      "Lv10": "290%",
+      "Lv11": "300%",
+      "Lv12": "310%",
+      "Lv13": "320%",
+      "Lv14": "330%",
+      "Lv15": "340%"
+    }
+  },
+  "JarMeow": {
+    "name": "Jar Meow",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726055809166/image-removebg-preview_6.png?ex=67cc6956&is=67cb17d6&hm=de52112dc447c15430ca8762390cd2828b192087e318429db9dd76fb126872f4&=&format=webp&quality=lossless&width=328&height=358",
+    "NewAbilities": {
+      "Lv3": "-5s skill cooldown",
+      "Lv6": "Unlocks [Meow!]",
+      "Lv9": "+5% chance to upgrade a random element",
+      "Lv12": "10% chance to gain both coins & souls",
+      "Lv15": "-5s skill cooldown"
+    },
+    "GoldGains": {
+      "Lv1": "10-100",
+      "Lv2": "10-150",
+      "Lv3": "10-200",
+      "Lv4": "10-250",
+      "Lv5": "10-300",
+      "Lv6": "10-350",
+      "Lv7": "10-400",
+      "Lv8": "10-450",
+      "Lv9": "10-500",
+      "Lv10": "10-550",
+      "Lv11": "10-600",
+      "Lv12": "10-650",
+      "Lv13": "10-700",
+      "Lv14": "10-750",
+      "Lv15": "10-800"
+    },
+    "SoulGains": {
+      "Lv1": "1-1",
+      "Lv4": "1-2",
+      "Lv7": "1-3",
+      "Lv10": "1-4",
+      "Lv13": "1-5"
+    }
+  },
+  "MouseTyson": {
+    "name": "Mouse Tyson",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080516305038/image-removebg-preview_11.png?ex=67cc69aa&is=67cb182a&hm=3320ec75c15a282ce7b57627c36baa4b8988733fc173d172fb2cd0d4027275ce&=&format=webp&quality=lossless&width=325&height=373",
+    "NewAbilities": {
+      "Lv3": "+2s skill duration",
+      "Lv6": "During skill duration, mimics Shaman's Stone Fist spell",
+      "Lv9": "+50% damage to mimicked Stone Fist spell",
+      "Lv12": "During skill duration, mimics Shaman's Earth Touch spell",
+      "Lv15": "Unlocks [Guard Up]"
+    }
+  },
+  "OldManScrow": {
+    "name": "Old Man Scrow",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724910895114/image-removebg-preview_3.png?ex=67cc6956&is=67cb17d6&hm=24f40aa1795f022651f7ae0e8e9b0a54638b818cda1c881a9b243322b9888a97&=&format=webp&quality=lossless&width=414&height=385",
+    "NewAbilities": {
+      "Lv3": "-5s skill cooldown",
+      "Lv6": "Gain +10 coins",
+      "Lv9": "Unlocks [Forsaken Souls]",
+      "Lv12": "At the start of each wave, gain 10% of held coins (max 200 coins)",
+      "Lv15": "Triples [Forsaken Souls] gain"
+    },
+    "PaydaySkillCooldown": {
+      "Lv1": "50s",
+      "Lv2": "47s",
+      "Lv3": "44s",
+      "Lv4": "41s",
+      "Lv5": "38s",
+      "Lv6": "35s",
+      "Lv7": "32s",
+      "Lv8": "29s",
+      "Lv9": "26s",
+      "Lv10": "23s",
+      "Lv11": "20s",
+      "Lv12": "17s",
+      "Lv13": "14s",
+      "Lv14": "11s",
+      "Lv15": "8s"
+    }
+  },
+  "RacoonMan": {
+    "name": "Racoon Man",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726475235440/image-removebg-preview_7.png?ex=67cc6956&is=67cb17d6&hm=c7fef323d5ba7b10f29167650d5eb7001d727109caf32f042b9e670148ca4ada&=&format=webp&quality=lossless&width=396&height=354",
+    "NewAbilities": {
+      "Lv3": "Gain 2 :I_Soul: upon first transforming into the 2nd bounty target",
+      "Lv6": "Gain 600 :I_Coin: upon first transforming into the 3rd bounty target",
+      "Lv9": "Gain 7 :I_Soul: upon first transforming into the 4th bounty target",
+      "Lv12": "Gain 1500 :I_Coin: upon first transforming into the 5th bounty target",
+      "Lv15": "Gain 14 :I_Soul: upon first transforming into the 6th bounty target"
+    },
+    "AttackDamage": {
+      "Lv1": 64000,
+      "Lv2": 83200,
+      "Lv3": 102400,
+      "Lv4": 121600,
+      "Lv5": 140800,
+      "Lv6": 160000,
+      "Lv7": 179200,
+      "Lv8": 198400,
+      "Lv9": 217600,
+      "Lv10": 236800,
+      "Lv11": 256000,
+      "Lv12": 275200,
+      "Lv13": 294400,
+      "Lv14": 313600,
+      "Lv15": 332800
+    }
+  },
+  "RockKeeperBoboo": {
+    "name": "Rock Keeper Boboo",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724038348880/image-removebg-preview_1.png?ex=67cc6955&is=67cb17d5&hm=8b8d0c168dca6588403c87208d4df5cb63d0590a95f606163d3fa624c5822c8c&=&format=webp&quality=lossless&width=374&height=299",
+    "NewAbilities": {
+      "Lv3": "+50% damage dealt",
+      "Lv6": "+0.5s stun duration",
+      "Lv9": "-1s cooldown",
+      "Lv12": "+0.5s stun duration",
+      "Lv15": "+1 skill range"
+    },
+    "AttackDamage": {
+      "Lv1": 1000,
+      "Lv2": 1300,
+      "Lv3": 1600,
+      "Lv4": 1900,
+      "Lv5": 2200,
+      "Lv6": 2500,
+      "Lv7": 2800,
+      "Lv8": 3100,
+      "Lv9": 3400,
+      "Lv10": 3700,
+      "Lv11": 4000,
+      "Lv12": 4300,
+      "Lv13": 4600,
+      "Lv14": 4900,
+      "Lv15": 5200
+    }
+  },
+  "SageRolyPolyChu": {
+    "name": "Sage Roly Poly Chu",
+    "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724449255424/image-removebg-preview_2.png?ex=67cc6956&is=67cb17d6&hm=ecc05401091909d47a6594df3a19cb0fd963540ada5fd4c1cf0548d32bcb9cc1&=&format=webp&quality=lossless&width=443&height=384",
+    "NewAbilities": {
+      "Lv3": "-2s skill cooldown",
+      "Lv6": "Unlocks [Back to the Start]",
+      "Lv9": "+5% cooldown reset chance for all spells",
+      "Lv12": "Unlocks [All Together]",
+      "Lv15": "-10% cooldown for all Sacred Beast skills"
+    },
+    "LeapThroughTimeSpellCooldownReduction": {
+      "Lv1": "100%",
+      "Lv2": "105%",
+      "Lv3": "110%",
+      "Lv4": "115%",
+      "Lv5": "120%",
+      "Lv6": "125%",
+      "Lv7": "130%",
+      "Lv8": "135%",
+      "Lv9": "140%",
+      "Lv10": "145%",
+      "Lv11": "150%",
+      "Lv12": "155%",
+      "Lv13": "160%",
+      "Lv14": "165%",
+      "Lv15": "170%"
+    }
+  },
+  "MuscleBeautyBibi": {
+    "name": "Muscle Beauty Bibi",
+    "NewAbilities": {
+      "Lv3": "-5s skill cooldown",
+      "Lv6": "Unlocks [Match Made In Heaven]",
+      "Lv9": "Bound enemy deaths extend skill duration by +0.3s",
+      "Lv12": "Unlocks [Family Savings]",
+      "Lv15": "Bound enemies take +30% increased damage"
+    },
+    "AttackDamage": {
+      "Lv1": 30000,
+      "Lv2": 39000,
+      "Lv3": 48000,
+      "Lv4": 57000,
+      "Lv5": 66000,
+      "Lv6": 75000,
+      "Lv7": 84000,
+      "Lv8": 93000,
+      "Lv9": 102000,
+      "Lv10": 111000,
+      "Lv11": 120000,
+      "Lv12": 129000,
+      "Lv13": 138000,
+      "Lv14": 147000,
+      "Lv15": 156000
+    }
+  },
+  "NiceSkinBurber": {
+    "name": "Nice Skin Burber",
+    "NewAbilities": {
+      "Lv3": "+30% attack speed",
+      "Lv6": "Unlocks [Match Made In Heaven]",
+      "Lv9": "Deals 100% area damage around the attack target",
+      "Lv12": "Unlocks [Family Savings]",
+      "Lv15": "Burber’s skill is permanently activated"
+    },
+    "AttackDamage": {
+      "Lv1": 30000,
+      "Lv2": 39000,
+      "Lv3": 48000,
+      "Lv4": 57000,
+      "Lv5": 66000,
+      "Lv6": 75000,
+      "Lv7": 84000,
+      "Lv8": 93000,
+      "Lv9": 102000,
+      "Lv10": 111000,
+      "Lv11": 120000,
+      "Lv12": 129000,
+      "Lv13": 138000,
+      "Lv14": 147000,
+      "Lv15": 156000
+    }
+  }
+}

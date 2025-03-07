@@ -8,18 +8,22 @@ export interface BotEvent {
 
 export interface SlashCommand {
   name: string;
-  data: SlashCommandBuilder;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: SlashCommandBuilder | any;
   execute: (interaction: CommandInteraction) => Promise<void>;
 }
 
-export interface QuizQuestion {
-  question: string;
-  answer: string;
-  image?: string;
-  choiceA?: string;
-  choiceB?: string;
-  choiceC?: string;
-  choiceD?: string;
+export interface Beast {
+  name: string;
+  image: string;
+  NewAbilities?: Record<string, string>;
+  AttackDamage?: Record<string, number>;
+  RecoveryRate?: Record<string, string>;
+  SpellDamageIncrease?: Record<string, string>;
+  GoldGains?: Record<string, string>;
+  SoulGains?: Record<string, string>;
+  PaydaySkillCooldown?: Record<string, string>;
+  LeapThroughTimeSpellCooldownReduction?: Record<string, string>;
 }
 
 declare global {

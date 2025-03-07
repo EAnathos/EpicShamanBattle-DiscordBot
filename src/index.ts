@@ -3,6 +3,9 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import { SlashCommand } from '@/types';
 import { join } from 'path';
 import { readdirSync } from 'fs';
+import { loadData } from './utils/dataLoader';
+
+loadData();
 
 dotenv.config();
 
