@@ -4,9 +4,9 @@
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080231354388/image-removebg-preview_10.png?ex=67cc69aa&is=67cb182a&hm=7e1138854a63c7ff4f68af12ddc6e1cc2d9bf4ad5413e9d474db4d9a7301066c&=&format=webp&quality=lossless&width=469&height=399",
     "NewAbilities": {
       "Lv3": "+20% [ONE]’s Damnation skill damage",
-      "Lv6": "Unlocks [Woosh]",
+      "Lv6": "Unlocks **[Woosh]**",
       "Lv9": "+10% chance to unleash a tornado",
-      "Lv12": "Unlocks [Kaboom]",
+      "Lv12": "Unlocks **[Kaboom]**",
       "Lv15": "+5 lightning strike targets"
     }
   },
@@ -15,7 +15,7 @@
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725619470396/image-removebg-preview_5.png?ex=67cc6956&is=67cb17d6&hm=bdc1f85438cdde216de5ddeca0d7e645ac3c8c50b626e5df6c4287719624f041&=&format=webp&quality=lossless&width=373&height=360",
     "NewAbilities": {
       "Lv3": "+30% damage",
-      "Lv6": "Unlock [Smolder]",
+      "Lv6": "Unlocks **[Smolder]**",
       "Lv9": "+1 range per 30 flames",
       "Lv12": "[Prime] generates +1 flame",
       "Lv15": "20% chance to prevent flame reset"
@@ -82,9 +82,9 @@
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725246304359/image-removebg-preview_4.png?ex=67cc6956&is=67cb17d6&hm=f59af215ce42570c78110cd3091023bf2df55c33f98ccea365a89d8e999c67e4&=&format=webp&quality=lossless&width=338&height=416",
     "NewAbilities": {
       "Lv3": "+5% Shaman's HP recovery rate",
-      "Lv6": "Unlocks [Fluffy Blessing]",
+      "Lv6": "Unlocks **[Fluffy Blessing]**",
       "Lv9": "+2% spell attack power",
-      "Lv12": "Unlocks [Protection of Mountain Goat]",
+      "Lv12": "Unlocks **[Protection of Mountain Goat]**",
       "Lv15": "Upon Shaman's revival, +50% spell attack power"
     },
     "RecoveryRate": {
@@ -112,7 +112,7 @@
       "Lv3": "+2s skill duration",
       "Lv6": "Increases water element upgrade by 1 while the skill is active",
       "Lv9": "+5s skill duration",
-      "Lv12": "Unlocks [Forward]",
+      "Lv12": "Unlocks **[Forward]**",
       "Lv15": "+4% chance to use Tidal Wave spell"
     },
     "SpellDamageIncrease": {
@@ -138,7 +138,7 @@
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726055809166/image-removebg-preview_6.png?ex=67cc6956&is=67cb17d6&hm=de52112dc447c15430ca8762390cd2828b192087e318429db9dd76fb126872f4&=&format=webp&quality=lossless&width=328&height=358",
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
-      "Lv6": "Unlocks [Meow!]",
+      "Lv6": "Unlocks **[Meow!]**",
       "Lv9": "+5% chance to upgrade a random element",
       "Lv12": "10% chance to gain both coins & souls",
       "Lv15": "-5s skill cooldown"
@@ -176,7 +176,7 @@
       "Lv6": "During skill duration, mimics Shaman's Stone Fist spell",
       "Lv9": "+50% damage to mimicked Stone Fist spell",
       "Lv12": "During skill duration, mimics Shaman's Earth Touch spell",
-      "Lv15": "Unlocks [Guard Up]"
+      "Lv15": "Unlocks **[Guard Up]**"
     }
   },
   "OldManScrow": {
@@ -185,9 +185,9 @@
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
       "Lv6": "Gain +10 coins",
-      "Lv9": "Unlocks [Forsaken Souls]",
+      "Lv9": "Unlocks **[Forsaken Souls]**",
       "Lv12": "At the start of each wave, gain 10% of held coins (max 200 coins)",
-      "Lv15": "Triples [Forsaken Souls] gain"
+      "Lv15": "Triples **[Forsaken Souls]** gain"
     },
     "PaydaySkillCooldown": {
       "Lv1": "50s",
@@ -268,9 +268,9 @@
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724449255424/image-removebg-preview_2.png?ex=67cc6956&is=67cb17d6&hm=ecc05401091909d47a6594df3a19cb0fd963540ada5fd4c1cf0548d32bcb9cc1&=&format=webp&quality=lossless&width=443&height=384",
     "NewAbilities": {
       "Lv3": "-2s skill cooldown",
-      "Lv6": "Unlocks [Back to the Start]",
+      "Lv6": "Unlocks **[Back to the Start]**",
       "Lv9": "+5% cooldown reset chance for all spells",
-      "Lv12": "Unlocks [All Together]",
+      "Lv12": "Unlocks **[All Together]**",
       "Lv15": "-10% cooldown for all Sacred Beast skills"
     },
     "LeapThroughTimeSpellCooldownReduction": {
@@ -295,9 +295,9 @@
     "name": "Muscle Beauty Bibi",
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
-      "Lv6": "Unlocks [Match Made In Heaven]",
+      "Lv6": "Unlocks **[Match Made In Heaven]**",
       "Lv9": "Bound enemy deaths extend skill duration by +0.3s",
-      "Lv12": "Unlocks [Family Savings]",
+      "Lv12": "Unlocks **[Family Savings]**",
       "Lv15": "Bound enemies take +30% increased damage"
     },
     "AttackDamage": {
@@ -322,9 +322,9 @@
     "name": "Nice Skin Burber",
     "NewAbilities": {
       "Lv3": "+30% attack speed",
-      "Lv6": "Unlocks [Match Made In Heaven]",
+      "Lv6": "Unlocks **[Match Made In Heaven]**",
       "Lv9": "Deals 100% area damage around the attack target",
-      "Lv12": "Unlocks [Family Savings]",
+      "Lv12": "Unlocks **[Family Savings]**",
       "Lv15": "Burber’s skill is permanently activated"
     },
     "AttackDamage": {

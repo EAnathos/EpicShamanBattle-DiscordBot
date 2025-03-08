@@ -12,20 +12,22 @@ export const command: SlashCommand = {
         .setName('name')
         .setDescription('The name of the beast to retrieve information for.')
         .setRequired(true)
-        .addChoices({ name: 'Archmage [One]', value: 'ArchmageOne' })
-        .addChoices({ name: 'General Tremen', value: 'GeneralTremen' })
-        .addChoices({ name: 'Grim Reaper Profy', value: 'GrimReaperProfy' })
-        .addChoices({ name: 'Guard Captain Toji', value: 'GuardCaptainToji' })
-        .addChoices({ name: 'High Priest Fuzzy', value: 'HighPriestFuzzy' })
-        .addChoices({ name: 'Icicle III', value: 'IcicleIII' })
-        .addChoices({ name: 'Jar. Meow', value: 'JarMeow' })
-        .addChoices({ name: 'Mouse Tyson', value: 'MouseTyson' })
-        .addChoices({ name: 'Muscle Beauty Bibi', value: 'MuscleBeautyBibi' })
-        .addChoices({ name: 'Nice Skin Burber', value: 'NiceSkinBurber' })
-        .addChoices({ name: 'Old Man Scrow', value: 'OldManScrow' })
-        .addChoices({ name: 'Racoon  Man', value: 'RacoonMan' })
-        .addChoices({ name: 'Rock Keeper Boboo', value: 'RockKeeperBoboo' })
-        .addChoices({ name: 'Sage Roly-Poly Chu', value: 'SageRolyPolyChu' }),
+        .addChoices(
+          { name: 'Archmage [One]', value: 'ArchmageOne' },
+          { name: 'General Tremen', value: 'GeneralTremen' },
+          { name: 'Grim Reaper Profy', value: 'GrimReaperProfy' },
+          { name: 'Guard Captain Toji', value: 'GuardCaptainToji' },
+          { name: 'High Priest Fuzzy', value: 'HighPriestFuzzy' },
+          { name: 'Icicle III', value: 'IcicleIII' },
+          { name: 'Jar. Meow', value: 'JarMeow' },
+          { name: 'Mouse Tyson', value: 'MouseTyson' },
+          { name: 'Muscle Beauty Bibi', value: 'MuscleBeautyBibi' },
+          { name: 'Nice Skin Burber', value: 'NiceSkinBurber' },
+          { name: 'Old Man Scrow', value: 'OldManScrow' },
+          { name: 'Racoon  Man', value: 'RacoonMan' },
+          { name: 'Rock Keeper Boboo', value: 'RockKeeperBoboo' },
+          { name: 'Sage Roly-Poly Chu', value: 'SageRolyPolyChu' },
+        ),
     ),
   execute: async (interaction) => {
     const beastName = interaction.options.get('name', true)!.value as string;
@@ -51,25 +53,41 @@ export const command: SlashCommand = {
           : 'No abilities available',
       });
 
-    if (beast.AttackDamage) {
-      const attackDamageLines = Object.entries(beast.AttackDamage).map(([level, damage]) => `**${level}:** ${damage}`);
-
-      if (attackDamageLines.length > 0) {
-        embed.addFields({
-          name: ':crossed_swords: Attack Damage',
-          value: attackDamageLines.slice(0, 5).join('\n'),
-          inline: true,
-        });
-
-        for (let i = 5; i < attackDamageLines.length; i += 5) {
+    const addStatField = (
+      statName: string,
+      statData: { [s: string]: unknown } | ArrayLike<unknown> | undefined,
+      icon: string,
+    ) => {
+      if (statData) {
+        const statLines = Object.entries(statData).map(([level, value]) => `**${level}:** ${value}`);
+        if (statLines.length > 0) {
           embed.addFields({
-            name: '\u200B',
-            value: attackDamageLines.slice(i, i + 5).join('\n'),
+            name: `${icon} ${statName}`,
+            value: statLines.slice(0, 5).join('\n'),
             inline: true,
           });
+          for (let i = 5; i < statLines.length; i += 5) {
+            embed.addFields({
+              name: '\u200B',
+              value: statLines.slice(i, i + 5).join('\n'),
+              inline: true,
+            });
+          }
         }
       }
-    }
+    };
+
+    addStatField('Attack Damage', beast.AttackDamage, ':crossed_swords:');
+    addStatField('Recovery Rate', beast.RecoveryRate, ':green_heart:');
+    addStatField('Spell Damage Increase', beast.SpellDamageIncrease, ':sparkles:');
+    addStatField('Gold Gains', beast.GoldGains, '<:I_Coin:1347137020413083690>');
+    addStatField('Soul Gains', beast.SoulGains, '<:I_Soul:1347137053241905205>');
+    addStatField('Payday Skill Cooldown', beast.PaydaySkillCooldown, ':hourglass_flowing_sand:');
+    addStatField(
+      'Leap Through Time Spell Cooldown Reduction',
+      beast.LeapThroughTimeSpellCooldownReduction,
+      ':hourglass_flowing_sand:',
+    );
 
     await interaction.reply({ embeds: [embed] });
   },
