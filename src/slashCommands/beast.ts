@@ -24,7 +24,7 @@ export const command: SlashCommand = {
           { name: 'Muscle Beauty Bibi', value: 'MuscleBeautyBibi' },
           { name: 'Nice Skin Burber', value: 'NiceSkinBurber' },
           { name: 'Old Man Scrow', value: 'OldManScrow' },
-          { name: 'Racoon  Man', value: 'RacoonMan' },
+          { name: 'Racoon Man', value: 'RacoonMan' },
           { name: 'Rock Keeper Boboo', value: 'RockKeeperBoboo' },
           { name: 'Sage Roly-Poly Chu', value: 'SageRolyPolyChu' },
         ),
@@ -38,20 +38,25 @@ export const command: SlashCommand = {
       return;
     }
 
-    const embed = new EmbedBuilder()
-      .setTitle(`${beast.name}`)
-      .setColor('#00AE86')
-      .setThumbnail(beast.image)
-      .addFields({
-        name: ':scroll: New Abilities',
-        value: beast.NewAbilities
-          ? `- **Lv 3:** ${beast.NewAbilities.Lv3}\n` +
-            `- **Lv 6:** ${beast.NewAbilities.Lv6}\n` +
-            `- **Lv 9:** ${beast.NewAbilities.Lv9}\n` +
-            `- **Lv 12:** ${beast.NewAbilities.Lv12}\n` +
-            `- **Lv 15:** ${beast.NewAbilities.Lv15}`
-          : 'No abilities available',
-      });
+    const embed = new EmbedBuilder().setTitle(`${beast.name}`).setColor('#00AE86').setThumbnail(beast.image);
+
+    if (beast.skills) {
+      const skillsValue = beast.skills
+        .map((skill: { name: string; description: string }) => `- **${skill.name}**: ${skill.description}`)
+        .join('\n');
+      embed.addFields({ name: ':magic_wand: Skills', value: skillsValue });
+    }
+
+    embed.addFields({
+      name: ':scroll: New Abilities',
+      value: beast.NewAbilities
+        ? `- **Lv 3:** ${beast.NewAbilities.Lv3}\n` +
+          `- **Lv 6:** ${beast.NewAbilities.Lv6}\n` +
+          `- **Lv 9:** ${beast.NewAbilities.Lv9}\n` +
+          `- **Lv 12:** ${beast.NewAbilities.Lv12}\n` +
+          `- **Lv 15:** ${beast.NewAbilities.Lv15}`
+        : 'No abilities available',
+    });
 
     const addStatField = (
       statName: string,
@@ -84,7 +89,7 @@ export const command: SlashCommand = {
     addStatField('Soul Gains', beast.SoulGains, '<:I_Soul:1347137053241905205>');
     addStatField('Payday Skill Cooldown', beast.PaydaySkillCooldown, ':hourglass_flowing_sand:');
     addStatField(
-      'Leap Through Time Spell Cooldown Reduction',
+      'Leap Through Time CD Reduction',
       beast.LeapThroughTimeSpellCooldownReduction,
       ':hourglass_flowing_sand:',
     );

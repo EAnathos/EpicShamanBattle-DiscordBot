@@ -2,6 +2,20 @@
   "ArchmageOne": {
     "name": "Archmage One",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080231354388/image-removebg-preview_10.png?ex=67cc69aa&is=67cb182a&hm=7e1138854a63c7ff4f68af12ddc6e1cc2d9bf4ad5413e9d474db4d9a7301066c&=&format=webp&quality=lossless&width=469&height=399",
+    "skills": [
+      {
+        "name": "Damnation",
+        "description": "Uses the highest upgraded [VI Damnation] spell"
+      },
+      {
+        "name": "Woosh",
+        "description": "Activating skill grants 20% chance to launch a tornaado forward, pushing ennemies away."
+      },
+      {
+        "name": "Kaboom",
+        "description": "Activating skill grants 10% chance to strike 5 random ennemies with lightning dealing 10000000 damage."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+20% [ONE]’s Damnation skill damage",
       "Lv6": "Unlocks **[Woosh]**",
@@ -13,6 +27,20 @@
   "GeneralTremen": {
     "name": "General Tremen",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725619470396/image-removebg-preview_5.png?ex=67cc6956&is=67cb17d6&hm=bdc1f85438cdde216de5ddeca0d7e645ac3c8c50b626e5df6c4287719624f041&=&format=webp&quality=lossless&width=373&height=360",
+    "skills": [
+      {
+        "name": "Bombard",
+        "description": "Consumes all flames to deal area damage (number of flames x 10% of attack power). Requires at least 10 flames."
+      },
+      {
+        "name": "Prime",
+        "description": "Generates 1 flame every second."
+      },
+      {
+        "name": "Smolder",
+        "description": "All ennemies hit by the attack are inflicted with a burn status."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+30% damage",
       "Lv6": "Unlocks **[Smolder]**",
@@ -41,6 +69,12 @@
   "GrimReaperProfy": {
     "name": "Grim Reaper Profy",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875079920844871/image-removebg-preview_9.png?ex=67cc69aa&is=67cb182a&hm=1858b016549cadab08539fddea723fa559ccd4749eaa13c66951a063d9c78c09&=&format=webp&quality=lossless&width=398&height=401",
+    "skills": [
+      {
+        "name": "Harvest",
+        "description": "Swings the scythe, dealing damage equal to 8% of target's current HP to ennemies within range."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "Reduces skill cooldown by 5s",
       "Lv6": "+2% effect of HP-proportional damage",
@@ -52,6 +86,16 @@
   "GuardCaptainToji": {
     "name": "Guard Captain Toji",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726987071579/image-removebg-preview_8.png?ex=67cc6956&is=67cb17d6&hm=ba77ea7ef56e1cb3797cf06eba50e0475a3fde82d1bd6b62b8cb422fbb101a5c&=&format=webp&quality=lossless&width=454&height=295",
+    "skills": [
+      {
+        "name": "Heart Seeker",
+        "description": "Continuously attacks ennemies in the area for 15 seconds."
+      },
+      {
+        "name": "Kill Experience",
+        "description": "Increases attack power by 4% each time an ennemy is directly defeated."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+1 attack range",
       "Lv6": "+50% attack speed",
@@ -80,6 +124,20 @@
   "HighPriestFuzzy": {
     "name": "High Priest Fuzzy",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725246304359/image-removebg-preview_4.png?ex=67cc6956&is=67cb17d6&hm=f59af215ce42570c78110cd3091023bf2df55c33f98ccea365a89d8e999c67e4&=&format=webp&quality=lossless&width=338&height=416",
+    "skills": [
+      {
+        "name": "Warm Light",
+        "description": "Restore 15% of the Shaman's Health."
+      },
+      {
+        "name": "Fluffy Blessing",
+        "description": "Increases the attack power of all spells by 3% when the skill is used."
+      },
+      {
+        "name": "Protection of Mountain Goat",
+        "description": "Upon the Shaman's first death, the Shaman revives with 50% HP and all spell attack power increases by 50% for 5 seconds."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+5% Shaman's HP recovery rate",
       "Lv6": "Unlocks **[Fluffy Blessing]**",
@@ -108,11 +166,21 @@
   "IcicleIII": {
     "name": "Icicle III",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874723539357706/image-removebg-preview.png?ex=67cc6955&is=67cb17d5&hm=829e8bdb70a99fe5ca85a22abd0b5074868e6dc9d3a1cfa2f7e2ad0a2760c4e1&=&format=webp&quality=lossless&width=231&height=221",
+    "skills": [
+      {
+        "name": "Forst Monarch",
+        "description": "For 10 seconds all ennemies' movement speed is reduced by 30% and all Water spell damage is increased by 200% (Locks Earth & Fire spells)."
+      },
+      {
+        "name": "Forward!",
+        "description": "Activating skill grants 12% chance to chain-cast the Tidal Wave 5 times."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+2s skill duration",
       "Lv6": "Increases water element upgrade by 1 while the skill is active",
       "Lv9": "+5s skill duration",
-      "Lv12": "Unlocks **[Forward]**",
+      "Lv12": "Unlocks **[Forward!]**",
       "Lv15": "+4% chance to use Tidal Wave spell"
     },
     "SpellDamageIncrease": {
@@ -136,6 +204,16 @@
   "JarMeow": {
     "name": "Jar Meow",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726055809166/image-removebg-preview_6.png?ex=67cc6956&is=67cb17d6&hm=de52112dc447c15430ca8762390cd2828b192087e318429db9dd76fb126872f4&=&format=webp&quality=lossless&width=328&height=358",
+    "skills": [
+      {
+        "name": "Meow?",
+        "description": "Obtain between 10 and 100 <:I_Coin:1347137020413083690> or between 1 and <:I_Soul:1347137053241905205>."
+      },
+      {
+        "name": "Meow!",
+        "description": "Has a 15% chance to upgrade a random element level by 1 when the skill is used."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
       "Lv6": "Unlocks **[Meow!]**",
@@ -171,6 +249,16 @@
   "MouseTyson": {
     "name": "Mouse Tyson",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080516305038/image-removebg-preview_11.png?ex=67cc69aa&is=67cb182a&hm=3320ec75c15a282ce7b57627c36baa4b8988733fc173d172fb2cd0d4027275ce&=&format=webp&quality=lossless&width=325&height=373",
+    "skills": [
+      {
+        "name": "One, Two, Hook",
+        "description": "Mimics the Shaman's Sand Fist spell for 6 seconds."
+      },
+      {
+        "name": "Guard Up",
+        "description": "Activating skill grants 3 shield stacks of the Rock Body spell."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+2s skill duration",
       "Lv6": "During skill duration, mimics Shaman's Stone Fist spell",
@@ -182,6 +270,16 @@
   "OldManScrow": {
     "name": "Old Man Scrow",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724910895114/image-removebg-preview_3.png?ex=67cc6956&is=67cb17d6&hm=24f40aa1795f022651f7ae0e8e9b0a54638b818cda1c881a9b243322b9888a97&=&format=webp&quality=lossless&width=414&height=385",
+    "skills": [
+      {
+        "name": "Payday!",
+        "description": "Gain 70 <:I_Coin:1347137020413083690>."
+      },
+      {
+        "name": "Forsaken Souls",
+        "description": "Casting Payday! skill grants a 10% chance to gain 1 <:I_Soul:1347137053241905205>."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
       "Lv6": "Gain +10 coins",
@@ -210,12 +308,18 @@
   "RacoonMan": {
     "name": "Racoon Man",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726475235440/image-removebg-preview_7.png?ex=67cc6956&is=67cb17d6&hm=c7fef323d5ba7b10f29167650d5eb7001d727109caf32f042b9e670148ca4ada&=&format=webp&quality=lossless&width=396&height=354",
+    "skills": [
+      {
+        "name": "Leaf Transformation Technique",
+        "description": "Transforms into the most recently defeated bounty target."
+      }
+    ],
     "NewAbilities": {
-      "Lv3": "Gain 2 :I_Soul: upon first transforming into the 2nd bounty target",
-      "Lv6": "Gain 600 :I_Coin: upon first transforming into the 3rd bounty target",
-      "Lv9": "Gain 7 :I_Soul: upon first transforming into the 4th bounty target",
-      "Lv12": "Gain 1500 :I_Coin: upon first transforming into the 5th bounty target",
-      "Lv15": "Gain 14 :I_Soul: upon first transforming into the 6th bounty target"
+      "Lv3": "Gain 2 <:I_Soul:1347137053241905205> upon first transforming into the 2nd bounty target",
+      "Lv6": "Gain 600 <:I_Coin:1347137020413083690> upon first transforming into the 3rd bounty target",
+      "Lv9": "Gain 7 <:I_Soul:1347137053241905205> upon first transforming into the 4th bounty target",
+      "Lv12": "Gain 1500 <:I_Coin:1347137020413083690> upon first transforming into the 5th bounty target",
+      "Lv15": "Gain 14 <:I_Soul:1347137053241905205> upon first transforming into the 6th bounty target"
     },
     "AttackDamage": {
       "Lv1": 64000,
@@ -238,6 +342,12 @@
   "RockKeeperBoboo": {
     "name": "Rock Keeper Boboo",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724038348880/image-removebg-preview_1.png?ex=67cc6955&is=67cb17d5&hm=8b8d0c168dca6588403c87208d4df5cb63d0590a95f606163d3fa624c5822c8c&=&format=webp&quality=lossless&width=374&height=299",
+    "skills": [
+      {
+        "name": "Rock Down!",
+        "description": "Throws a rock, dealing damage equal to 150% of attack power to ennemies in the area and stunning them for 1 second."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+50% damage dealt",
       "Lv6": "+0.5s stun duration",
@@ -266,6 +376,20 @@
   "SageRolyPolyChu": {
     "name": "Sage Roly Poly Chu",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724449255424/image-removebg-preview_2.png?ex=67cc6956&is=67cb17d6&hm=ecc05401091909d47a6594df3a19cb0fd963540ada5fd4c1cf0548d32bcb9cc1&=&format=webp&quality=lossless&width=443&height=384",
+    "skills": [
+      {
+        "name": "Leap Through Time",
+        "description": "Reduces the cooldown of all spells by 100% for 5 seconds."
+      },
+      {
+        "name": "Back to the Start",
+        "description": "Has a 10% chance to reset the cooldown of all spells when the skill is used."
+      },
+      {
+        "name": "All Together",
+        "description": "Reduces the cooldown of all Sacred Beast skills by 20% for 3 seconds when the skill is used."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "-2s skill cooldown",
       "Lv6": "Unlocks **[Back to the Start]**",
@@ -293,6 +417,20 @@
   },
   "MuscleBeautyBibi": {
     "name": "Muscle Beauty Bibi",
+    "skills": [
+      {
+        "name": "You shall not pass! (Disruptive)",
+        "description": "For 5 seconds, binds up to 3 ennemies within range and deals damage."
+      },
+      {
+        "name": "Match Made in Heaven",
+        "description": "If Burber is summoned, skill duration increases by 3 seconds."
+      },
+      {
+        "name": "Family Savings",
+        "description": "If Burber is summoned, the number of ennemies that can be bound increases by 1 for every 1000 <:I_Coin:1347137020413083690> owned."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "-5s skill cooldown",
       "Lv6": "Unlocks **[Match Made In Heaven]**",
@@ -320,6 +458,20 @@
   },
   "NiceSkinBurber": {
     "name": "Nice Skin Burber",
+    "skills": [
+      {
+        "name": "You shall not pass! (Physical)",
+        "description": "Attacks a random ennemy within range for 2 seconds (Once every 0.5 seconds)."
+      },
+      {
+        "name": "Match Made in Heaven",
+        "description": "If Bibi is summoned, ATK increases by 100%."
+      },
+      {
+        "name": "Family Savings",
+        "description": "If Bibi is summoned, ATK and attack speed increases by 7% for every 1000 <:I_Coin:1347137020413083690> owned."
+      }
+    ],
     "NewAbilities": {
       "Lv3": "+30% attack speed",
       "Lv6": "Unlocks **[Match Made In Heaven]**",
