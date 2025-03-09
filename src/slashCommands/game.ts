@@ -49,6 +49,6 @@ export const command: SlashCommand = {
       new ButtonBuilder().setCustomId(`leave_game_${code}`).setLabel('Leave Game').setStyle(ButtonStyle.Danger),
     );
 
-    await interaction.reply({ embeds: [embed], components: [buttons] });
+    await interaction.reply({ content: '<@&1347622250026766356>', embeds: [embed], components: [buttons] });
   },
 };
