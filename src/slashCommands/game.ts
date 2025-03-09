@@ -26,7 +26,7 @@ export const command: SlashCommand = {
 
     games.set(code, {
       creator: interaction.user.id,
-      players: [],
+      players: [interaction.user.id], // Add the creator to the players list
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
     });
 
@@ -41,7 +41,7 @@ export const command: SlashCommand = {
     const embed = new EmbedBuilder()
       .setTitle(`New game created by ${interaction.user.username}`)
       .setDescription('To join this game, click the `Join Game` button below.')
-      .addFields({ name: 'Players', value: 'No players yet.', inline: true })
+      .addFields({ name: 'Players', value: `<@${interaction.user.id}>`, inline: true })
       .setColor('#00AE86');
 
     const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
@@ -49,6 +49,19 @@ export const command: SlashCommand = {
       new ButtonBuilder().setCustomId(`leave_game_${code}`).setLabel('Leave Game').setStyle(ButtonStyle.Danger),
     );
 
-    await interaction.reply({ content: '<@&1347622250026766356>', embeds: [embed], components: [buttons] });
+    const message = await interaction.reply({
+      content: '<@&1347622250026766356>',
+      embeds: [embed],
+      components: [buttons],
+      allowedMentions: { roles: ['1347622250026766356'] },
+      fetchReply: true,
+    });
+
+    games.set(code, {
+      creator: interaction.user.id,
+      players: [interaction.user.id],
+      timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
+      message,
+    });
   },
 };

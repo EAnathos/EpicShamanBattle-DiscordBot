@@ -31,8 +31,25 @@ const event: BotEvent = {
         await interaction.reply({ content: 'You are not in this game.', ephemeral: true });
         return;
       }
+
       game.players.splice(index, 1);
       await interaction.user.send('You have left the game.');
+
+      if (interaction.user.id === game.creator) {
+        clearTimeout(game.timeout);
+        games.delete(code);
+
+        if (game.message) {
+          try {
+            await game.message.delete();
+          } catch (error) {
+            console.error('Failed to delete game message:', error);
+          }
+        }
+
+        await interaction.reply({ content: 'The game has been deleted as the creator left.', ephemeral: true });
+        return;
+      }
     }
 
     const updatedEmbed = new EmbedBuilder()
