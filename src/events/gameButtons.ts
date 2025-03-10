@@ -111,9 +111,7 @@ const event: BotEvent = {
         const user = await interaction.client.users.fetch(playerId);
         await user
           .send(
-            `The game has started! Here are your channels:\n
-          - Voice Channel: <#${voiceChannel.id}>\n
-          - Text Channel: <#${textChannel.id}>`,
+            `The game has started! Here are your channels:\n- Voice Channel: <#${voiceChannel.id}>\n- Text Channel: <#${textChannel.id}>`,
           )
           .catch(() => console.log(`Failed to send DM to ${user.tag}`));
       }
