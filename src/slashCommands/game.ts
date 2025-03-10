@@ -26,8 +26,9 @@ export const command: SlashCommand = {
 
     games.set(code, {
       creator: interaction.user.id,
-      players: [interaction.user.id], // Add the creator to the players list
+      players: [interaction.user.id],
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
+      voiceChannel: null,
     });
 
     await interaction.user.send(`You have created a new game with the code: **${code}**.`).catch(() => {
@@ -47,6 +48,7 @@ export const command: SlashCommand = {
     const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
       new ButtonBuilder().setCustomId(`join_game_${code}`).setLabel('Join Game').setStyle(ButtonStyle.Primary),
       new ButtonBuilder().setCustomId(`leave_game_${code}`).setLabel('Leave Game').setStyle(ButtonStyle.Danger),
+      new ButtonBuilder().setCustomId(`launch_game_${code}`).setLabel('Launch Game').setStyle(ButtonStyle.Success),
     );
 
     const message = await interaction.reply({
@@ -62,6 +64,7 @@ export const command: SlashCommand = {
       players: [interaction.user.id],
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
       message,
+      voiceChannel: null,
     });
   },
 };
