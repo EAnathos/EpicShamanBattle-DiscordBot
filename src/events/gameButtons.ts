@@ -2,6 +2,8 @@ import { BotEvent } from '@/types';
 import { Events, Interaction, EmbedBuilder, CategoryChannel, PermissionFlagsBits } from 'discord.js';
 import { games } from '../slashCommands/game';
 
+const INACTIVITY_LIMIT = 60 * 60 * 1000; // 1 heure en millisecondes
+
 const event: BotEvent = {
   name: Events.InteractionCreate,
   once: false,
@@ -107,6 +109,8 @@ const event: BotEvent = {
       });
       game.textChannel = textChannel;
 
+      await textChannel.send('🎮 The game has started! Use this channel to communicate.');
+
       for (const playerId of game.players) {
         const user = await interaction.client.users.fetch(playerId);
         await user
@@ -116,10 +120,14 @@ const event: BotEvent = {
           .catch(() => console.log(`Failed to send DM to ${user.tag}`));
       }
 
-      await interaction.followUp({
-        content: `Game channels created: <#${voiceChannel.id}> (VC), <#${textChannel.id}> (Chat)`,
-        ephemeral: true,
-      });
+      // Timer de suppression après 1 heure d'inactivité
+      game.inactivityTimeout = setTimeout(async () => {
+        if (textChannel && voiceChannel) {
+          await textChannel.delete().catch(console.error);
+          await voiceChannel.delete().catch(console.error);
+        }
+        games.delete(code);
+      }, INACTIVITY_LIMIT);
     }
 
     const updatedEmbed = new EmbedBuilder()
