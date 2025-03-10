@@ -1,5 +1,5 @@
 import { BotEvent } from '@/types';
-import { Events, Interaction, EmbedBuilder, CategoryChannel } from 'discord.js';
+import { Events, Interaction, EmbedBuilder, CategoryChannel, PermissionFlagsBits } from 'discord.js';
 import { games } from '../slashCommands/game';
 
 const event: BotEvent = {
@@ -55,6 +55,11 @@ const event: BotEvent = {
     }
 
     if (action === 'launch') {
+      if (interaction.user.id !== game.creator) {
+        await interaction.followUp({ content: 'Only the game creator can launch the game.', ephemeral: true });
+        return;
+      }
+
       if (game.voiceChannel) {
         await interaction.followUp({ content: 'The game is already launched.', ephemeral: true });
         return;
@@ -64,6 +69,16 @@ const event: BotEvent = {
         name: `Game-${code}`,
         type: 2,
         parent: guild!.channels.cache.get('1344331471560769668') as CategoryChannel,
+        permissionOverwrites: [
+          {
+            id: guild!.roles.everyone.id,
+            deny: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.Connect],
+          },
+          ...game.players.map((playerId: string) => ({
+            id: playerId,
+            allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.Connect, PermissionFlagsBits.Speak],
+          })),
+        ],
       });
 
       game.voiceChannel = voiceChannel;
