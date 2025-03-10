@@ -27,7 +27,9 @@ const event: BotEvent = {
       }
 
       game.players.push(interaction.user.id);
-      await interaction.user.send(`You have joined the game! Your game code is: **\`${code}\`**`);
+      const joinMessage = `You have joined the game! Your game code is: **\`${code}\`**`;
+      await interaction.user.send(joinMessage);
+      await interaction.followUp({ content: joinMessage, ephemeral: true });
     }
 
     if (action === 'leave') {
