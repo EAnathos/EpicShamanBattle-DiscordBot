@@ -2,7 +2,7 @@ import { BotEvent } from '@/types';
 import { Events, Interaction, EmbedBuilder, CategoryChannel, PermissionFlagsBits } from 'discord.js';
 import { games } from '../slashCommands/game';
 
-const INACTIVITY_LIMIT = 60 * 60 * 1000; // 1 heure en millisecondes
+const INACTIVITY_LIMIT = 60 * 60 * 1000;
 
 const event: BotEvent = {
   name: Events.InteractionCreate,
@@ -72,7 +72,6 @@ const event: BotEvent = {
 
       const category = guild!.channels.cache.get('1344331471560769668') as CategoryChannel;
 
-      // Create voice channel
       const voiceChannel = await guild!.channels.create({
         name: `「🎮🔊」game-${code}`,
         type: 2,
@@ -122,7 +121,6 @@ const event: BotEvent = {
           .catch(() => console.log(`Failed to send DM to ${user.tag}`));
       }
 
-      // Timer de suppression après 1 heure d'inactivité
       game.inactivityTimeout = setTimeout(async () => {
         if (textChannel && voiceChannel) {
           await textChannel.delete().catch(console.error);
@@ -135,11 +133,19 @@ const event: BotEvent = {
     const updatedEmbed = new EmbedBuilder()
       .setTitle(`Game created by ${interaction.guild!.members.cache.get(game.creator)?.user.username || 'Unknown'}`)
       .setDescription('To join this game, click the `Join Game` button below.')
-      .addFields({
-        name: '**Players**',
-        value: game.players.length ? game.players.map((id: string) => `<@${id}>`).join('\n') : 'No players yet.',
-        inline: true,
-      })
+      .addFields(
+        {
+          name: '**Players**',
+          value: game.players.length ? game.players.map((id: string) => `<@${id}>`).join('\n') : 'No players yet.',
+          inline: true,
+        },
+        {
+          name: '**Difficulty**',
+          value: game.difficulty,
+          inline: true,
+        },
+        { name: 'Server', value: game.server, inline: true },
+      )
       .setColor('#00AE86');
 
     await interaction.editReply({ embeds: [updatedEmbed] });

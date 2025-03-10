@@ -11,16 +11,21 @@ export const command: SlashCommand = {
     .addStringOption((option) =>
       option.setName('code').setDescription('The 4-digit code for the game you created.').setRequired(true),
     )
+    .addStringOption((option) =>
+      option
+        .setName('server')
+        .setDescription('Choose the server: Asia or Global')
+        .addChoices(
+          { name: 'Asia', value: 'Asia :tanabata_tree:' },
+          { name: 'Global', value: 'Global :globe_with_meridians:' },
+        ),
+    )
     .addUserOption((option) => option.setName('player1').setDescription('First player to invite').setRequired(false))
     .addUserOption((option) => option.setName('player2').setDescription('Second player to invite').setRequired(false))
     .addUserOption((option) => option.setName('player3').setDescription('Third player to invite').setRequired(false)),
   execute: async (interaction) => {
     const code = interaction.options.get('code', true)!.value as string;
-    const invitedPlayers = [
-      interaction.options.get('player1'),
-      interaction.options.get('player2'),
-      interaction.options.get('player3'),
-    ].filter(Boolean);
+    const server = (interaction.options.get('server')?.value as string) || 'Global :globe_with_meridians:';
 
     if (!/^[0-9]{4}$/.test(code)) {
       await interaction.reply({ content: 'Invalid code. Please provide a 4-digit code.', ephemeral: true });
@@ -32,34 +37,40 @@ export const command: SlashCommand = {
       return;
     }
 
+    const invitedPlayers = [
+      interaction.options.get('player1'),
+      interaction.options.get('player2'),
+      interaction.options.get('player3'),
+    ].filter(Boolean);
     const players = [interaction.user.id, ...invitedPlayers.map((player) => player!.user!.id)];
 
-    games.set(code, {
-      creator: interaction.user.id,
-      players,
-      timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
-      voiceChannel: null,
-    });
+    const difficulty = interaction.channelId === '1344328767426002996' ? 'Hard :red_circle:' : 'Normal :green_circle:';
 
-    await interaction.user.send(`You have created a new game with the code: **${code}**.`).catch(() => {
-      interaction.reply({
-        content: 'I cannot send you a private message. Please make sure your DMs are enabled.',
-        ephemeral: true,
+    await interaction.user
+      .send(`You have created a new game with the code: **${code}** on the **${server}** server.`)
+      .catch(() => {
+        interaction.reply({
+          content: 'I cannot send you a private message. Please make sure your DMs are enabled.',
+          ephemeral: true,
+        });
+        return;
       });
-      return;
-    });
 
     for (const player of invitedPlayers) {
       const user = player!.user;
       await user!
-        .send(`You have been invited to a game! Your game code is: **\`${code}\`**.`)
+        .send(`You have been invited to a game! Your game code is: **\`${code}\`** on the **${server}** server.`)
         .catch(() => console.log(`Failed to send DM to ${user!.tag}`));
     }
 
     const embed = new EmbedBuilder()
       .setTitle(`New game created by ${interaction.user.username}`)
       .setDescription('To join this game, click the `Join Game` button below.')
-      .addFields({ name: 'Players', value: players.map((id) => `<@${id}>`).join('\n'), inline: true })
+      .addFields(
+        { name: 'Players', value: players.map((id) => `<@${id}>`).join('\n'), inline: true },
+        { name: 'Difficulty', value: difficulty, inline: true },
+        { name: 'Server', value: server, inline: true },
+      )
       .setColor('#00AE86');
 
     const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
@@ -79,6 +90,8 @@ export const command: SlashCommand = {
     games.set(code, {
       creator: interaction.user.id,
       players,
+      difficulty,
+      server,
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
       message,
       voiceChannel: null,
