@@ -25,7 +25,7 @@ const event: BotEvent = {
       }
 
       game.players.push(interaction.user.id);
-      await interaction.user.send(`You have joined the game! Your game code is: **${code}**`);
+      await interaction.user.send(`You have joined the game! Your game code is: **\`${code}\`**`);
     }
 
     if (action === 'leave') {
@@ -42,6 +42,7 @@ const event: BotEvent = {
         clearTimeout(game.timeout);
         games.delete(code);
         if (game.voiceChannel) await game.voiceChannel.delete();
+        if (game.textChannel) await game.textChannel.delete();
         if (game.message) {
           try {
             await game.message.delete();
@@ -60,15 +61,18 @@ const event: BotEvent = {
         return;
       }
 
-      if (game.voiceChannel) {
+      if (game.voiceChannel || game.textChannel) {
         await interaction.followUp({ content: 'The game is already launched.', ephemeral: true });
         return;
       }
 
+      const category = guild!.channels.cache.get('1344331471560769668') as CategoryChannel;
+
+      // Create voice channel
       const voiceChannel = await guild!.channels.create({
-        name: `Game-${code}`,
+        name: `「🎮🔊」game-${code}`,
         type: 2,
-        parent: guild!.channels.cache.get('1344331471560769668') as CategoryChannel,
+        parent: category,
         permissionOverwrites: [
           {
             id: guild!.roles.everyone.id,
@@ -80,9 +84,44 @@ const event: BotEvent = {
           })),
         ],
       });
-
       game.voiceChannel = voiceChannel;
-      await interaction.followUp({ content: `Voice channel created: <#${voiceChannel.id}>`, ephemeral: true });
+
+      const textChannel = await guild!.channels.create({
+        name: `「🎮💬」game-${code}`,
+        type: 0,
+        parent: category,
+        permissionOverwrites: [
+          {
+            id: guild!.roles.everyone.id,
+            deny: [PermissionFlagsBits.ViewChannel],
+          },
+          ...game.players.map((playerId: string) => ({
+            id: playerId,
+            allow: [
+              PermissionFlagsBits.ViewChannel,
+              PermissionFlagsBits.SendMessages,
+              PermissionFlagsBits.ReadMessageHistory,
+            ],
+          })),
+        ],
+      });
+      game.textChannel = textChannel;
+
+      for (const playerId of game.players) {
+        const user = await interaction.client.users.fetch(playerId);
+        await user
+          .send(
+            `The game has started! Here are your channels:\n
+          - Voice Channel: <#${voiceChannel.id}>\n
+          - Text Channel: <#${textChannel.id}>`,
+          )
+          .catch(() => console.log(`Failed to send DM to ${user.tag}`));
+      }
+
+      await interaction.followUp({
+        content: `Game channels created: <#${voiceChannel.id}> (VC), <#${textChannel.id}> (Chat)`,
+        ephemeral: true,
+      });
     }
 
     const updatedEmbed = new EmbedBuilder()

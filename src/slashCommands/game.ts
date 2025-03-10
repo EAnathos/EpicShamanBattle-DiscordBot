@@ -10,9 +10,17 @@ export const command: SlashCommand = {
     .setDescription('Allows you to create a game and invite your friends.')
     .addStringOption((option) =>
       option.setName('code').setDescription('The 4-digit code for the game you created.').setRequired(true),
-    ),
+    )
+    .addUserOption((option) => option.setName('player1').setDescription('First player to invite').setRequired(false))
+    .addUserOption((option) => option.setName('player2').setDescription('Second player to invite').setRequired(false))
+    .addUserOption((option) => option.setName('player3').setDescription('Third player to invite').setRequired(false)),
   execute: async (interaction) => {
     const code = interaction.options.get('code', true)!.value as string;
+    const invitedPlayers = [
+      interaction.options.get('player1'),
+      interaction.options.get('player2'),
+      interaction.options.get('player3'),
+    ].filter(Boolean);
 
     if (!/^[0-9]{4}$/.test(code)) {
       await interaction.reply({ content: 'Invalid code. Please provide a 4-digit code.', ephemeral: true });
@@ -24,9 +32,11 @@ export const command: SlashCommand = {
       return;
     }
 
+    const players = [interaction.user.id, ...invitedPlayers.map((player) => player!.user!.id)];
+
     games.set(code, {
       creator: interaction.user.id,
-      players: [interaction.user.id],
+      players,
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
       voiceChannel: null,
     });
@@ -39,10 +49,17 @@ export const command: SlashCommand = {
       return;
     });
 
+    for (const player of invitedPlayers) {
+      const user = player!.user;
+      await user!
+        .send(`You have been invited to a game! Your game code is: **\`${code}\`**.`)
+        .catch(() => console.log(`Failed to send DM to ${user!.tag}`));
+    }
+
     const embed = new EmbedBuilder()
       .setTitle(`New game created by ${interaction.user.username}`)
       .setDescription('To join this game, click the `Join Game` button below.')
-      .addFields({ name: 'Players', value: `<@${interaction.user.id}>`, inline: true })
+      .addFields({ name: 'Players', value: players.map((id) => `<@${id}>`).join('\n'), inline: true })
       .setColor('#00AE86');
 
     const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
@@ -61,7 +78,7 @@ export const command: SlashCommand = {
 
     games.set(code, {
       creator: interaction.user.id,
-      players: [interaction.user.id],
+      players,
       timeout: setTimeout(() => games.delete(code), 15 * 60 * 1000),
       message,
       voiceChannel: null,
