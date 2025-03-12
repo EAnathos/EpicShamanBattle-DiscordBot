@@ -2,6 +2,7 @@
   "ArchmageOne": {
     "name": "Archmage One",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080231354388/image-removebg-preview_10.png?ex=67cc69aa&is=67cb182a&hm=7e1138854a63c7ff4f68af12ddc6e1cc2d9bf4ad5413e9d474db4d9a7301066c&=&format=webp&quality=lossless&width=469&height=399",
+    "prerequisite" : "<:SE_Earthquake:1348677512003059825><:SF_FlameTornado:1348690461094580255><:SF_FlameTornado:1348690461094580255><:SW_IceLightning:1348691165721133127>",
     "skills": [
       {
         "name": "Damnation",
@@ -27,6 +28,7 @@
   "GeneralTremen": {
     "name": "General Tremen",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725619470396/image-removebg-preview_5.png?ex=67cc6956&is=67cb17d6&hm=bdc1f85438cdde216de5ddeca0d7e645ac3c8c50b626e5df6c4287719624f041&=&format=webp&quality=lossless&width=373&height=360",
+    "prerequisite" : "<:SF_FlameTornado:1348690461094580255><:SF_FireMine:1348690463489789973><:SF_PillarOfFire:1348690465414844608><:SF_Charcoal:1348690469445439488><:SF_Charcoal:1348690469445439488>",
     "skills": [
       {
         "name": "Bombard",
@@ -69,6 +71,7 @@
   "GrimReaperProfy": {
     "name": "Grim Reaper Profy",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875079920844871/image-removebg-preview_9.png?ex=67cc69aa&is=67cb182a&hm=1858b016549cadab08539fddea723fa559ccd4749eaa13c66951a063d9c78c09&=&format=webp&quality=lossless&width=398&height=401",
+    "prerequisite" : "<:SE_EarthTouch:1348677516902273065><:SW_Icicle:1348691171559608320><:SF_Burn:1348690467818307594>",
     "skills": [
       {
         "name": "Harvest",
@@ -86,6 +89,7 @@
   "GuardCaptainToji": {
     "name": "Guard Captain Toji",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726987071579/image-removebg-preview_8.png?ex=67cc6956&is=67cb17d6&hm=ba77ea7ef56e1cb3797cf06eba50e0475a3fde82d1bd6b62b8cb422fbb101a5c&=&format=webp&quality=lossless&width=454&height=295",
+    "prerequisite" : "<:SW_Drizzle:1348691198457675929><:SF_Burn:1348690467818307594><:SF_PillarOfFire:1348690465414844608>",
     "skills": [
       {
         "name": "Heart Seeker",
@@ -124,6 +128,7 @@
   "HighPriestFuzzy": {
     "name": "High Priest Fuzzy",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874725246304359/image-removebg-preview_4.png?ex=67cc6956&is=67cb17d6&hm=f59af215ce42570c78110cd3091023bf2df55c33f98ccea365a89d8e999c67e4&=&format=webp&quality=lossless&width=338&height=416",
+    "prerequisite" : "<:SW_IceAge:1348691169554464871><:SF_PillarOfFire:1348690465414844608><:SE_SandFist:1348677521603825726>",
     "skills": [
       {
         "name": "Warm Light",
@@ -166,6 +171,7 @@
   "IcicleIII": {
     "name": "Icicle III",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874723539357706/image-removebg-preview.png?ex=67cc6955&is=67cb17d5&hm=829e8bdb70a99fe5ca85a22abd0b5074868e6dc9d3a1cfa2f7e2ad0a2760c4e1&=&format=webp&quality=lossless&width=231&height=221",
+    "prerequisite" : "<:SW_IceLightning:1348691165721133127><:SW_IceAge:1348691169554464871><:SW_IceAge:1348691169554464871><:SW_IceAge:1348691169554464871><:SW_Icicle:1348691171559608320>",
     "skills": [
       {
         "name": "Forst Monarch",
@@ -204,6 +210,7 @@
   "JarMeow": {
     "name": "Jar Meow",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726055809166/image-removebg-preview_6.png?ex=67cc6956&is=67cb17d6&hm=de52112dc447c15430ca8762390cd2828b192087e318429db9dd76fb126872f4&=&format=webp&quality=lossless&width=328&height=358",
+    "prerequisite" : "<:SE_RockPillar:1348677515144728650><:SW_IceAge:1348691169554464871><:SE_RockBody:1348677518416154624>",
     "skills": [
       {
         "name": "Meow?",
@@ -249,6 +256,7 @@
   "MouseTyson": {
     "name": "Mouse Tyson",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346875080516305038/image-removebg-preview_11.png?ex=67cc69aa&is=67cb182a&hm=3320ec75c15a282ce7b57627c36baa4b8988733fc173d172fb2cd0d4027275ce&=&format=webp&quality=lossless&width=325&height=373",
+    "prerequisite" : "<:SE_SandFist:1348677521603825726><:SE_StoneFist:1348677519821373511><:SE_StoneFist:1348677519821373511><:SE_StoneFist:1348677519821373511><:SE_StoneFist:1348677519821373511><:SE_StoneFist:1348677519821373511>",
     "skills": [
       {
         "name": "One, Two, Hook",
@@ -270,6 +278,7 @@
   "OldManScrow": {
     "name": "Old Man Scrow",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724910895114/image-removebg-preview_3.png?ex=67cc6956&is=67cb17d6&hm=24f40aa1795f022651f7ae0e8e9b0a54638b818cda1c881a9b243322b9888a97&=&format=webp&quality=lossless&width=414&height=385",
+    "prerequisite" : "<:SE_EarthTouch:1348677516902273065><:SF_PillarOfFire:1348690465414844608><:SW_HeavyRain:1348691173086072934>",
     "skills": [
       {
         "name": "Payday!",
@@ -308,6 +317,7 @@
   "RacoonMan": {
     "name": "Racoon Man",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874726475235440/image-removebg-preview_7.png?ex=67cc6956&is=67cb17d6&hm=c7fef323d5ba7b10f29167650d5eb7001d727109caf32f042b9e670148ca4ada&=&format=webp&quality=lossless&width=396&height=354",
+    "prerequisite" : "<:SF_FireMine:1348690463489789973><:SW_Icicle:1348691171559608320><:SF_Burn:1348690467818307594>",
     "skills": [
       {
         "name": "Leaf Transformation Technique",
@@ -342,6 +352,7 @@
   "RockKeeperBoboo": {
     "name": "Rock Keeper Boboo",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724038348880/image-removebg-preview_1.png?ex=67cc6955&is=67cb17d5&hm=8b8d0c168dca6588403c87208d4df5cb63d0590a95f606163d3fa624c5822c8c&=&format=webp&quality=lossless&width=374&height=299",
+    "prerequisite" : "<:SE_SandFist:1348677521603825726><:SE_SandFist:1348677521603825726><:SE_StoneFist:1348677519821373511><:SE_RockBody:1348677518416154624>",
     "skills": [
       {
         "name": "Rock Down!",
@@ -376,6 +387,7 @@
   "SageRolyPolyChu": {
     "name": "Sage Roly Poly Chu",
     "image": "https://media.discordapp.net/attachments/1346874380092969051/1346874724449255424/image-removebg-preview_2.png?ex=67cc6956&is=67cb17d6&hm=ecc05401091909d47a6594df3a19cb0fd963540ada5fd4c1cf0548d32bcb9cc1&=&format=webp&quality=lossless&width=443&height=384",
+    "prerequisite" : "<:SF_FireMine:1348690463489789973><:SF_FireMine:1348690463489789973><:SW_HeavyRain:1348691173086072934><:SW_HeavyRain:1348691173086072934>",
     "skills": [
       {
         "name": "Leap Through Time",
@@ -417,6 +429,7 @@
   },
   "MuscleBeautyBibi": {
     "name": "Muscle Beauty Bibi",
+    "prerequisite" : "<:SE_RockBody:1348677518416154624><:SE_StoneFist:1348677519821373511><:SW_HeavyRain:1348691173086072934><:SF_Charcoal:1348690469445439488>",
     "skills": [
       {
         "name": "You shall not pass! (Disruptive)",
@@ -458,6 +471,7 @@
   },
   "NiceSkinBurber": {
     "name": "Nice Skin Burber",
+    "prerequisite" : "<:SE_RockPillar:1348677515144728650><:SF_FlameTornado:1348690461094580255><:SW_IceLightning:1348691165721133127>",
     "skills": [
       {
         "name": "You shall not pass! (Physical)",

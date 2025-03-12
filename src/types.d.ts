@@ -16,6 +16,7 @@ export interface SlashCommand {
 export interface Beast {
   name: string;
   image: string;
+  prerequisite: string;
   skills?: { name: string; description: string }[];
   NewAbilities?: Record<string, string>;
   AttackDamage?: Record<string, number>;

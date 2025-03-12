@@ -40,21 +40,21 @@ export const command: SlashCommand = {
 
     const embed = new EmbedBuilder().setTitle(`${beast.name}`).setColor('#00AE86').setThumbnail(beast.image);
 
+    if (beast.prerequisite) {
+      embed.addFields({ name: 'Summon requirements', value: beast.prerequisite });
+    }
+
     if (beast.skills) {
-      const skillsValue = beast.skills
-        .map((skill: { name: string; description: string }) => `- **${skill.name}**: ${skill.description}`)
-        .join('\n');
-      embed.addFields({ name: ':magic_wand: Skills', value: skillsValue });
+      const skillsValue = beast.skills.map((skill) => `- **${skill.name}**: ${skill.description}`).join('\n');
+      embed.addFields({ name: 'Skills', value: skillsValue });
     }
 
     embed.addFields({
-      name: ':scroll: New Abilities',
+      name: 'New Abilities :scroll:',
       value: beast.NewAbilities
-        ? `- **Lv 3:** ${beast.NewAbilities.Lv3}\n` +
-          `- **Lv 6:** ${beast.NewAbilities.Lv6}\n` +
-          `- **Lv 9:** ${beast.NewAbilities.Lv9}\n` +
-          `- **Lv 12:** ${beast.NewAbilities.Lv12}\n` +
-          `- **Lv 15:** ${beast.NewAbilities.Lv15}`
+        ? Object.entries(beast.NewAbilities)
+            .map(([level, desc]) => `- **${level}:** ${desc}`)
+            .join('\n')
         : 'No abilities available',
     });
 
@@ -66,17 +66,9 @@ export const command: SlashCommand = {
       if (statData) {
         const statLines = Object.entries(statData).map(([level, value]) => `**${level}:** ${value}`);
         if (statLines.length > 0) {
-          embed.addFields({
-            name: `${icon} ${statName}`,
-            value: statLines.slice(0, 5).join('\n'),
-            inline: true,
-          });
+          embed.addFields({ name: `${statName} ${icon}`, value: statLines.slice(0, 5).join('\n'), inline: true });
           for (let i = 5; i < statLines.length; i += 5) {
-            embed.addFields({
-              name: '\u200B',
-              value: statLines.slice(i, i + 5).join('\n'),
-              inline: true,
-            });
+            embed.addFields({ name: '\u200B', value: statLines.slice(i, i + 5).join('\n'), inline: true });
           }
         }
       }
