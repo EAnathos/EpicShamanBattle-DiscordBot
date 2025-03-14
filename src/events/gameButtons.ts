@@ -26,6 +26,11 @@ const event: BotEvent = {
         return;
       }
 
+      if (game.players.length >= 4) {
+        await interaction.followUp({ content: 'This game is full.', ephemeral: true });
+        return;
+      }
+
       game.players.push(interaction.user.id);
       const joinMessage = `You have joined the game! Your game code is: **\`${code}\`**`;
       await interaction.user.send(joinMessage);

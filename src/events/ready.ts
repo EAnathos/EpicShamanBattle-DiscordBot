@@ -10,12 +10,12 @@ const event: BotEvent = {
 
     // Tâche planifiée pour envoyer le message tous les jours à 16h heure française (UTC+1 ou UTC+2 en été)
     cron.schedule(
-      '0 15 * * *',
+      '0 16 * * *',
       () => {
         const channel = client.channels.cache.get('1342582088292892672') as TextChannel;
         if (channel) {
           channel.send(
-            "@「📢」Daily-reset\nIt's time to reset, here we go again to farm, as a reminder, you can:\n- Do the daily quests\n- Watch videos for the meat/shop/relic chest",
+            "<@&1349032788459786251>\nIt's time to reset, here we go again to farm, as a reminder, you can:\n- Do the daily quests\n- Watch videos for the meat/shop/relic chest",
           );
           console.log('📢 Message quotidien envoyé.');
         } else {
@@ -23,7 +23,7 @@ const event: BotEvent = {
         }
       },
       {
-        timezone: 'Europe/Paris', // Assure que l'heure est correcte en France
+        timezone: 'Europe/Paris',
       },
     );
   },
