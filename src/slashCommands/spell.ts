@@ -71,10 +71,8 @@ export const command: SlashCommand = {
       .setTitle(`${spell.name}`)
       .setColor(spellColor)
       .setThumbnail(spell.image)
-      .setDescription(spell.description);
-
-    // Add cooldown
-    embed.addFields({ name: 'Cooldown ⏳', value: `${spell.cooldown} sec`, inline: true });
+      .setDescription(spell.description)
+      .setFooter({ text: `Cooldown: ${spell.cooldown} sec ⏳` }); // Cooldown ajouté en footer
 
     // Display attack damage per level (5 levels per line)
     if (spell.AttackDamage) {
