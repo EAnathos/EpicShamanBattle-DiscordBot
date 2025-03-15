@@ -67,12 +67,16 @@ export const command: SlashCommand = {
         break;
     }
 
-    const embed = new EmbedBuilder().setTitle(`${spell.name}`).setColor(spellColor).setThumbnail(spell.image);
+    const embed = new EmbedBuilder()
+      .setTitle(`${spell.name}`)
+      .setColor(spellColor)
+      .setThumbnail(spell.image)
+      .setDescription(spell.description);
 
-    // Ajout du cooldown
+    // Add cooldown
     embed.addFields({ name: 'Cooldown ⏳', value: `${spell.cooldown} sec`, inline: true });
 
-    // Gestion de l'affichage des dégâts en fonction du niveau (3 lignes, 5 niveaux par ligne)
+    // Display attack damage per level (5 levels per line)
     if (spell.AttackDamage) {
       const attackLevels = Object.entries(spell.AttackDamage).map(([level, value]) => `**${level}:** ${value}`);
 

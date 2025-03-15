@@ -1,6 +1,7 @@
 {
   "TidalWave": {
     "name": "Tidal Wave",
+    "description": "Surges Tidal Wave that advances to the end of its path, dealing area damage. Damage decreases by 5% for each ennemy hit.",
     "image": "https://cdn.discordapp.com/attachments/1348085598958915614/1350441883477872672/image-removebg-preview_37.png?ex=67d6c083&is=67d56f03&hm=c4c4389b4b859a6dd1e9d69fdf7a84703b49293072cc43e6757a1cff44ce9152&",
     "cooldown": 3,
     "AttackDamage": {
@@ -19,6 +20,52 @@
       "Lv13": 441600,
       "Lv14": 470400,
       "Lv15": 499200
+    }
+  },
+  "Meteor": {
+    "name": "Meteor",
+    "description": "Drops a massive Meteor on the area with the most ennemies, dealing area damage and applying a Burn Status.",
+    "image": "https://cdn.discordapp.com/attachments/1348085598958915614/1350441885079961643/image-removebg-preview_31.png?ex=67d6c083&is=67d56f03&hm=2f8a8cadf7f2b2a4f721782cd00ba825cda3e398b97539fb8cd36962f82b61b9&",
+    "cooldown": 4,
+    "AttackDamage": {
+      "Lv1": 100000,
+      "Lv2": 130000,
+      "Lv3": 160000,
+      "Lv4": 190000,
+      "Lv5": 220000,
+      "Lv6": 250000,
+      "Lv7": 280000,
+      "Lv8": 310000,
+      "Lv9": 340000,
+      "Lv10": 370000,
+      "Lv11": 400000,
+      "Lv12": 430000,
+      "Lv13": 460000,
+      "Lv14": 490000,
+      "Lv15": 520000
+    }
+  },
+  "Earthquake": {
+    "name": "Earthquake",
+    "description": "Earthquake inflicts 100% area damage to nearby ennemies and 10% damage to all other ennemies.",
+    "image": "https://cdn.discordapp.com/attachments/1348085598958915614/1350441856139526248/image-removebg-preview_25.png?ex=67d6c07c&is=67d56efc&hm=6df80641027bc5b05104bca9d732be45682b911bc041bfdec0ae30103838b8ba&",
+    "cooldown": 10,
+    "AttackDamage": {
+      "Lv1": 320000,
+      "Lv2": 384000,
+      "Lv3": 448000,
+      "Lv4": 512000,
+      "Lv5": 576000,
+      "Lv6": 640000,
+      "Lv7": 704000,
+      "Lv8": 768000,
+      "Lv9": 832000,
+      "Lv10": 896000,
+      "Lv11": 960000,
+      "Lv12": 1024000,
+      "Lv13": 1088000,
+      "Lv14": 1152000,
+      "Lv15": 1216000
     }
   }
 }

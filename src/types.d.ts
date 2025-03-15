@@ -30,6 +30,7 @@ export interface Beast {
 
 export interface Spell {
   name: string;
+  description: string;
   image: string;
   cooldown: number;
   AttackDamage: Record<string, number>;
