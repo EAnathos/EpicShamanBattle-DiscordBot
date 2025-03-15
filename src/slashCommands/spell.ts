@@ -50,7 +50,12 @@ export const command: SlashCommand = {
             .setName('name')
             .setDescription('The name of the earth spell to retrieve information for.')
             .setRequired(true)
-            .addChoices({ name: 'Earthquake', value: 'Earthquake' }),
+            .addChoices({ name: 'Earthquake', value: 'Earthquake' })
+            .addChoices({ name: 'Rock Pillar', value: 'RockPillar' })
+            .addChoices({ name: 'Earth Touch', value: 'EarthTouch' })
+            .addChoices({ name: 'Rock Body', value: 'RockBody' })
+            .addChoices({ name: 'Stone Fist', value: 'StoneFist' })
+            .addChoices({ name: 'Sand Fist', value: 'SandFist' }),
         ),
     ),
   execute: async (interaction) => {

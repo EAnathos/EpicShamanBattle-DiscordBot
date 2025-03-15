@@ -275,6 +275,121 @@
       "Lv15": 520000
     }
   },
+  "SandFist": {
+    "name": "Sand Fist",
+    "description": "Deals area damage to nearby ennemies with Sand Fist.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441857716326420/image-removebg-preview_20.png?ex=67d6c07c&is=67d56efc&hm=6703d1252a1fc1e4e67df48ad5f126371ecf928a3061fcbe5c606f04882291fa&=&format=webp&quality=lossless&width=165&height=159",
+    "cooldown": 1.3,
+    "AttackDamage": {
+      "Lv1": 200,
+      "Lv2": 260,
+      "Lv3": 320,
+      "Lv4": 380,
+      "Lv5": 440,
+      "Lv6": 500,
+      "Lv7": 560,
+      "Lv8": 620,
+      "Lv9": 680,
+      "Lv10": 740,
+      "Lv11": 800,
+      "Lv12": 860,
+      "Lv13": 920,
+      "Lv14": 980,
+      "Lv15": 1040
+    }
+  },
+  "StoneFist": {
+    "name": "Stone Fist",
+    "description": "Stone Fist inflicts area damage to nearby ennemies with a 20% chance to stun them for 0.5 seconds.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441857397690450/image-removebg-preview_21.png?ex=67d6c07c&is=67d56efc&hm=5ba03a0ddf2675f1912ffedc55e5e833c8e13efd20773deec0814bf25aaa4a65&=&format=webp&quality=lossless&width=158&height=150",
+    "cooldown": 4,
+    "AttackDamage": {
+    "Lv1": 1700,
+    "Lv2": 2210,
+    "Lv3": 2720,
+    "Lv4": 3230,
+    "Lv5": 3740,
+    "Lv6": 4250,
+    "Lv7": 4760,
+    "Lv8": 5270,
+    "Lv9": 5780,
+    "Lv10": 6290,
+    "Lv11": 6800,
+    "Lv12": 7310,
+    "Lv13": 7820,
+    "Lv14": 8330,
+    "Lv15": 8840
+  }
+  },
+  "RockBody": {
+    "name": "Rock Body",
+    "description": "Generates a shield the blocks one instance of damage. The shield can stack infinitely, and when it blocks damage, it retaliates against the attacker.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441857146028125/image-removebg-preview_22.png?ex=67d6c07c&is=67d56efc&hm=7bc7bf27951e48d37bd11a371e78ad2baf38defdcf2a0dc3ddbb1da6d11a8b21&=&format=webp&quality=lossless&width=180&height=151",
+    "cooldown": 10,
+    "AttackDamage": {
+    "Lv1": 8500,
+    "Lv2": 11050,
+    "Lv3": 13600,
+    "Lv4": 16150,
+    "Lv5": 18700,
+    "Lv6": 21250,
+    "Lv7": 23800,
+    "Lv8": 26350,
+    "Lv9": 28900,
+    "Lv10": 31450,
+    "Lv11": 34000,
+    "Lv12": 36550,
+    "Lv13": 39100,
+    "Lv14": 41650,
+    "Lv15": 44200
+  }
+  },
+  "EarthTouch": {
+    "name": "Earth Touch",
+    "description": "Earth Touch inflicts area damage to nearby ennemies. If damage is inflicted, Shaman restores 1% HP.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441856844169247/image-removebg-preview_23.png?ex=67d6c07c&is=67d56efc&hm=f361f902b3ebd277db33afbd98c8e2480e21adfdbc4bccbe9c934b95b0d8ebf7&=&format=webp&quality=lossless&width=150&height=144",
+    "cooldown": 2.5,
+    "AttackDamage": {
+    "Lv1": 5500,
+    "Lv2": 7150,
+    "Lv3": 8800,
+    "Lv4": 10450,
+    "Lv5": 12100,
+    "Lv6": 13750,
+    "Lv7": 15400,
+    "Lv8": 17050,
+    "Lv9": 18700,
+    "Lv10": 20350,
+    "Lv11": 22000,
+    "Lv12": 23650,
+    "Lv13": 25300,
+    "Lv14": 26950,
+    "Lv15": 28600
+  }
+  },
+  "RockPillar": {
+    "name": "Rock Pillar",
+    "description": "Summons 5 stone pillars that inflict damage on random ennemies. Each 10 stacks of Rock Body increases the number of attack targets by 1.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441856445583401/image-removebg-preview_24.png?ex=67d6c07c&is=67d56efc&hm=f8cbb30d7c639befa9745aef379fc8da7a32a0d595674dc082eed0896f99c203&=&format=webp&quality=lossless&width=174&height=161",
+    "cooldown": 4,
+    "AttackDamage": {
+    "Lv1": 34000,
+    "Lv2": 44200,
+    "Lv3": 54400,
+    "Lv4": 64600,
+    "Lv5": 74800,
+    "Lv6": 85000,
+    "Lv7": 95200,
+    "Lv8": 105400,
+    "Lv9": 115600,
+    "Lv10": 125800,
+    "Lv11": 136000,
+    "Lv12": 146200,
+    "Lv13": 156400,
+    "Lv14": 166600,
+    "Lv15": 176800
+  }
+  },
   "Earthquake": {
     "name": "Earthquake",
     "description": "Earthquake inflicts 100% area damage to nearby ennemies and 10% damage to all other ennemies.",
