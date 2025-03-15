@@ -1,0 +1,24 @@
+{
+  "TidalWave": {
+    "name": "Tidal Wave",
+    "image": "https://cdn.discordapp.com/attachments/1348085598958915614/1350441883477872672/image-removebg-preview_37.png?ex=67d6c083&is=67d56f03&hm=c4c4389b4b859a6dd1e9d69fdf7a84703b49293072cc43e6757a1cff44ce9152&",
+    "cooldown": 3,
+    "AttackDamage": {
+      "Lv1": 96000,
+      "Lv2": 124800,
+      "Lv3": 153600,
+      "Lv4": 182400,
+      "Lv5": 211200,
+      "Lv6": 240000,
+      "Lv7": 268800,
+      "Lv8": 297600,
+      "Lv9": 326400,
+      "Lv10": 355200,
+      "Lv11": 384000,
+      "Lv12": 412800,
+      "Lv13": 441600,
+      "Lv14": 470400,
+      "Lv15": 499200
+    }
+  }
+}

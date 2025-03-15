@@ -10,7 +10,7 @@ export interface SlashCommand {
   name: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: SlashCommandBuilder | any;
-  execute: (interaction: CommandInteraction) => Promise<void>;
+  execute: (interaction: CommandInteraction | ChatInputCommandInteraction) => Promise<void>;
 }
 
 export interface Beast {
@@ -26,6 +26,13 @@ export interface Beast {
   SoulGains?: Record<string, string>;
   PaydaySkillCooldown?: Record<string, string>;
   LeapThroughTimeSpellCooldownReduction?: Record<string, string>;
+}
+
+export interface Spell {
+  name: string;
+  image: string;
+  cooldown: number;
+  AttackDamage: Record<string, number>;
 }
 
 declare global {
