@@ -137,6 +137,121 @@
       "Lv15": 499200
     }
   },
+  "Charcoal": {
+    "name": "Charcoal",
+    "description": "Throws a charcoal, dealing small area damage to the first ennemy hit.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441855657185300/image-removebg-preview_26.png?ex=67d6c07c&is=67d56efc&hm=ecbc72093b69fc3cf193f1bd35066c581a0c6c30746c9866bbc1852bbd5a5058&=&format=webp&quality=lossless&width=139&height=140",
+    "cooldown": 3.2,
+    "AttackDamage": {
+      "Lv1": 300,
+      "Lv2": 390,
+      "Lv3": 480,
+      "Lv4": 570,
+      "Lv5": 660,
+      "Lv6": 750,
+      "Lv7": 840,
+      "Lv8": 930,
+      "Lv9": 1020,
+      "Lv10": 1110,
+      "Lv11": 1200,
+      "Lv12": 1290,
+      "Lv13": 1380,
+      "Lv14": 1470,
+      "Lv15": 1560
+    }
+  },
+  "Burn": {
+    "name": "Burn",
+    "description": "A random ennemy is inflicted with Burn status. Burned ennemies take 15% damage every second and explod upon death, dealing 100% area damage to nearby ennemies.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441855111659614/image-removebg-preview_27.png?ex=67d6c07c&is=67d56efc&hm=dfadf4cac9c8767a3323df87881c0c23e5c4f4f8c60630cfd640fb51e7b0f0d9&=&format=webp&quality=lossless&width=149&height=150",
+    "cooldown": 4,
+    "AttackDamage": {
+      "Lv1": 800,
+      "Lv2": 1040,
+      "Lv3": 1280,
+      "Lv4": 1520,
+      "Lv5": 1760,
+      "Lv6": 2000,
+      "Lv7": 2240,
+      "Lv8": 2480,
+      "Lv9": 2720,
+      "Lv10": 2960,
+      "Lv11": 3200,
+      "Lv12": 3440,
+      "Lv13": 3680,
+      "Lv14": 3920,
+      "Lv15": 4160
+    }
+  },
+  "PillarOfFire": {
+    "name": "Pillar of Fire",
+    "description": "Creates a pillar of fire that advances a certain distance, exploding and dealing area damage to ennemies.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441854868394065/image-removebg-preview_28.png?ex=67d6c07c&is=67d56efc&hm=4d7a396b27ad9610e590b3fcda66b65f5d1c264bbdb5246ba7920ad64def9f23&=&format=webp&quality=lossless&width=164&height=143",
+    "cooldown": 8,
+    "AttackDamage": {
+      "Lv1": 6000,
+      "Lv2": 7800,
+      "Lv3": 9600,
+      "Lv4": 11400,
+      "Lv5": 13200,
+      "Lv6": 15000,
+      "Lv7": 16800,
+      "Lv8": 18600,
+      "Lv9": 20400,
+      "Lv10": 22200,
+      "Lv11": 24000,
+      "Lv12": 25800,
+      "Lv13": 27600,
+      "Lv14": 29400,
+      "Lv15": 31200
+    }
+  },
+  "FireMine": {
+    "name": "Fire Mine",
+    "description": "Places Fire Mine in random locations. Fire Mine explodes on contact with ennemies, dealing area damage (Up to 30 mines can be placed).",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441854587506778/image-removebg-preview_29.png?ex=67d6c07c&is=67d56efc&hm=ad1c757e081b36a03d03eb4b0985bf34fb36963295099b53912d694ec9040875&=&format=webp&quality=lossless&width=155&height=143",
+    "cooldown": 2.7,
+    "AttackDamage": {
+      "Lv1": 12000,
+      "Lv2": 15600,
+      "Lv3": 19200,
+      "Lv4": 22800,
+      "Lv5": 26400,
+      "Lv6": 30000,
+      "Lv7": 33600,
+      "Lv8": 37200,
+      "Lv9": 40800,
+      "Lv10": 44400,
+      "Lv11": 48000,
+      "Lv12": 51600,
+      "Lv13": 55200,
+      "Lv14": 58800,
+      "Lv15": 62400
+    }
+  },
+  "FlameTornado": {
+    "name": "Flame Tornado",
+    "description": "Creates a Flame Tornado that advances to the end of its path and explodes, dealing area damage. Burned ennemies take 500% additional damage.",
+    "image": "https://media.discordapp.net/attachments/1348085598958915614/1350441885315108885/image-removebg-preview_30.png?ex=67d6c083&is=67d56f03&hm=b7a9a5eebf13288ad24eda9ca9590a9b0a398aec1ddd098a189f091e89af461f&=&format=webp&quality=lossless&width=175&height=158",
+    "cooldown": 18,
+    "AttackDamage": {
+      "Lv1": 48000,
+      "Lv2": 58800,
+      "Lv3": 69600,
+      "Lv4": 80400,
+      "Lv5": 91200,
+      "Lv6": 102000,
+      "Lv7": 112800,
+      "Lv8": 123600,
+      "Lv9": 134400,
+      "Lv10": 145200,
+      "Lv11": 156000,
+      "Lv12": 166800,
+      "Lv13": 177600,
+      "Lv14": 188400,
+      "Lv15": 199200
+    }
+  },
   "Meteor": {
     "name": "Meteor",
     "description": "Drops a massive Meteor on the area with the most ennemies, dealing area damage and applying a Burn Status.",

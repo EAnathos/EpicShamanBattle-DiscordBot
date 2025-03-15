@@ -16,7 +16,12 @@ export const command: SlashCommand = {
             .setName('name')
             .setDescription('The name of the fire spell to retrieve information for.')
             .setRequired(true)
-            .addChoices({ name: 'Meteor', value: 'Meteor' }),
+            .addChoices({ name: 'Meteor', value: 'Meteor' })
+            .addChoices({ name: 'Flame Tornado', value: 'FlameTornado' })
+            .addChoices({ name: 'Fire Mine', value: 'FireMine' })
+            .addChoices({ name: 'Pillar of Fire', value: 'PillarOfFire' })
+            .addChoices({ name: 'Burn', value: 'Burn' })
+            .addChoices({ name: 'Charcoal', value: 'Charcoal' }),
         ),
     )
     .addSubcommand((subcommand) =>
