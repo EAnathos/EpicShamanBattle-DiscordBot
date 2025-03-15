@@ -62,13 +62,13 @@ export const command: SlashCommand = {
 
     switch (subcommand) {
       case 'fire':
-        spellColor = '#FF0000';
+        spellColor = '#803C3E';
         break;
       case 'water':
-        spellColor = '#0000FF';
+        spellColor = '#357575';
         break;
       case 'earth':
-        spellColor = '#008000';
+        spellColor = '#858272';
         break;
     }
 
