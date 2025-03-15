@@ -28,7 +28,12 @@ export const command: SlashCommand = {
             .setName('name')
             .setDescription('The name of the water spell to retrieve information for.')
             .setRequired(true)
-            .addChoices({ name: 'Tidal Wave', value: 'TidalWave' }),
+            .addChoices({ name: 'Tidal Wave', value: 'TidalWave' })
+            .addChoices({ name: 'Ice Lightning', value: 'IceLightning' })
+            .addChoices({ name: 'Ice Age', value: 'IceAge' })
+            .addChoices({ name: 'Icicle', value: 'Icicle' })
+            .addChoices({ name: 'Heavy Rain', value: 'HeavyRain' })
+            .addChoices({ name: 'Drizzle', value: 'Drizzle' }),
         ),
     )
     .addSubcommand((subcommand) =>
