@@ -26,13 +26,9 @@ export const command: SlashCommand = {
           inline: false,
         },
         {
-          name: '/spell',
+          name: '/spell [fire | water | earth]',
           value:
-            'Retrieve information about a spell.\n' +
-            '- **fire**: Retrieve information about a fire spell.\n' +
-            '- **water**: Retrieve information about a water spell.\n' +
-            '- **earth**: Retrieve information about an earth spell.\n' +
-            '- **name**: The name of the spell to retrieve information for.',
+            'Retrieve information about a spell.\n' + '- **name**: The name of the spell to retrieve information for.',
           inline: false,
         },
       )
