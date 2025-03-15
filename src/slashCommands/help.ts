@@ -25,6 +25,16 @@ export const command: SlashCommand = {
             'Retrieves information about a beast.\n' + '- **name**: The name of the beast to retrieve information for.',
           inline: false,
         },
+        {
+          name: '/spell',
+          value:
+            'Retrieve information about a spell.\n' +
+            '- **fire**: Retrieve information about a fire spell.\n' +
+            '- **water**: Retrieve information about a water spell.\n' +
+            '- **earth**: Retrieve information about an earth spell.\n' +
+            '- **name**: The name of the spell to retrieve information for.',
+          inline: false,
+        },
       )
       .setFooter({
         text: 'Note: Parameters inside <> are optional.',
