@@ -10,7 +10,7 @@ const event: BotEvent = {
 
     // Tâche planifiée pour envoyer le message tous les jours à 16h heure française (UTC+1 ou UTC+2 en été)
     cron.schedule(
-      '0 16 * * *',
+      '0 17 * * *',
       () => {
         const channel = client.channels.cache.get('1342582088292892672') as TextChannel;
         if (channel) {
