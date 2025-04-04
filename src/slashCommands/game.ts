@@ -44,7 +44,18 @@ export const command: SlashCommand = {
     ].filter(Boolean);
     const players = [interaction.user.id, ...invitedPlayers.map((player) => player!.user!.id)];
 
-    const difficulty = interaction.channelId === '1344328767426002996' ? 'Hard :red_circle:' : 'Normal :green_circle:';
+    let difficulty: string = 'Normal :green_circle:';
+    switch (interaction.channelId) {
+      case '1344328767426002996':
+        difficulty = 'Hard :red_circle:';
+        break;
+      case '1356867080842117130':
+        difficulty = 'Coop :handshake:';
+        break;
+      default:
+        difficulty = 'Normal :green_circle:';
+        break;
+    }
 
     await interaction.user
       .send(`You have created a new game with the code: **${code}** on the **${server}** server.`)
